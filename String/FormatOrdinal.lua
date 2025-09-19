@@ -9,7 +9,7 @@ local function FormatOrdinal(number)
     local lastDigit = number % 10
     local lastTwoDigits = number % 100
 
-    if lastTwoDigits > 10 and lastTwoDigits < 14 then
+    if lastTwoDigits >= 11 and lastTwoDigits <= 13 then
         return number .. 'th'
     else
         return number .. (OrdinalSuffixes[lastDigit] or OrdinalSuffixes[0])
